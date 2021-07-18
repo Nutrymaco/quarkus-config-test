@@ -1,4 +1,4 @@
-mymap:
+myMap:
   key1: value1
   event:
     READY: go

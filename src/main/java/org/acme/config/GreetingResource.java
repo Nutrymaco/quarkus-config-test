@@ -24,20 +24,20 @@ public class GreetingResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        System.out.println("mymap = " + mymap.mymap());
+        System.out.println("myMap = " + mymap.myMap());
         System.out.println("nested = " + mymap.nestedMap());
         return "Hello RESTEasy";
     }
 
-    enum Event {
+    public enum Event {
         READY,
         IN_PROGRESS;
     }
 
-    @ConfigMapping(prefix = "mymap")
-    interface MyMap {
+    @ConfigMapping(prefix = "myMap")
+    public interface MyMap {
         @WithParentName
-        Map<String, String> mymap();
+        Map<String, String> myMap();
 
         @WithName("event")
         Map<@WithConverter(EventConverter.class)Event, String> nestedMap();
