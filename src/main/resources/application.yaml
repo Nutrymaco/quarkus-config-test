@@ -1,0 +1,5 @@
+mymap:
+  key1: value1
+  event:
+    READY: go
+    IN_PROGRESS: do some
