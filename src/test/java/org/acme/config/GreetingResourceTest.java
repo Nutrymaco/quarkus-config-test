@@ -20,8 +20,6 @@ public class GreetingResourceTest {
     @Inject
     GreetingResource.MyMap myMap;
 
-    @ConfigProperty(name = "mymap.")
-
     @Test
     public void testConfigMapping() {
         assertEquals(Map.of("key1", "value1"), myMap.myMap());
